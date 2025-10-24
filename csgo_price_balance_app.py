@@ -25,9 +25,9 @@ P_range = np.linspace(0, buy_price_initial * 2, 200)
 profit = (P_range * total_qty) - total_cost
 
 fig, ax = plt.subplots(figsize=(6, 4))
-ax.plot(P_range, profit, label="总盈亏曲线", linewidth=2)
+ax.plot(P_range, profit, label="Line of Revenue", linewidth=2)
 ax.axhline(0, color="gray", linestyle="--")
-ax.axvline(break_even_price, color="red", linestyle="--", label=f"盈亏平衡点 = {break_even_price:.2f}元")
+ax.axvline(break_even_price, color="red", linestyle="--", label=f"Balance Point = {break_even_price:.2f}")
 ax.set_xlabel("Market Price")
 ax.set_ylabel("Revenue")
 ax.set_title("Revenue-Price Plot")
