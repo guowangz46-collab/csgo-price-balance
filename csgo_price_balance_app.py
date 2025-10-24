@@ -3,9 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import font_manager
 
-# ✅ 设置 Matplotlib 中文字体
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 中文黑体
-plt.rcParams['axes.unicode_minus'] = False    # 正常显示负号
+
 
 st.title("🎮 CSGO 皮肤加仓盈亏平衡模拟器")
 
@@ -30,9 +28,9 @@ fig, ax = plt.subplots(figsize=(6, 4))
 ax.plot(P_range, profit, label="总盈亏曲线", linewidth=2)
 ax.axhline(0, color="gray", linestyle="--")
 ax.axvline(break_even_price, color="red", linestyle="--", label=f"盈亏平衡点 = {break_even_price:.2f}元")
-ax.set_xlabel("市场价格 (元)")
-ax.set_ylabel("总盈亏 (元)")
-ax.set_title("盈亏随市场价格变化图")
+ax.set_xlabel("Market Price")
+ax.set_ylabel("Revenue")
+ax.set_title("Revenue-Price Plot")
 ax.legend()
 st.pyplot(fig)
 
